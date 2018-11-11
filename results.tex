@@ -1,0 +1,44 @@
+\chapter{Results and Future Work}
+These are the results we have gathered after our experiments.
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Learning Model & Accuracy \\
+\hline
+Decision Tree & 82.45\% \\
+Random Forest & 84.67\% \\
+SVM (Linear Kernel) & 42.23\% \\
+Neural Network ($<$ 4 layers)& 52.49\% \\
+Neural Network (4 layers)& 63.9\% \\
+Neural Network ($>$ 4 layers)& 58.8\%(Overfitting) \\
+\hline
+\end{tabular}
+\caption{Single VM-type system}
+\label{table:single}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Learning Model & Accuracy\\
+\hline
+Decision Tree & 59.4\% \\
+Random Forest & 63.2\% \\
+\hline
+\end{tabular}
+\caption{Multiple VM-type system}
+\label{table:multiple}
+\end{table}
+\end{center}
+
+
+
+\section{Reasons}
+As the features we extracted are very discrete, problem is more of a kind of decision problem. Neural Network/ SVM couldn't learn the problem because they couldn't fit functions for the discrete data. Further the training time for Decision Tree, Random Forest and Boosting is an order smaller than compared to SVM and Neural Network.
+\section{Conclusions and Future Work}
+We introduced a system, a workload management advisor for cloud databases with Multiple VM types. Our system deploys machine learning techniques to learn decision models for guiding the low-cost execution of incoming queries under application-defined performance goals. We have shown that these decision models can efficiently and effectively schedule a wide range of workloads. We need to further analyze the cost taken with various metrics using TPC-H benchmark\cite{council2008tpc}. We also need to think of alternative features and alternative advanced machine learning techniques which can solve this problem more efficiently.

@@ -1,0 +1,11 @@
+\chapter{Experiments}
+\section{Experimental setup}
+We implemented the system using C++ 14 and Python. We used sklearn\cite{pedregosa2011scikit}, keras\cite{chollet2013keras} in python for the implementation of the Machine Learning Models. 
+
+\section {Training data}
+We have initially run the A* algorithm \cite{hart1968formal} for approx. 64000 workloads each of 16queries in 12 templates. We initially ran the process with Single-type VMs. We have extracted the proposed features from the schedules which gave us approx. 11 lakh tests to deal with. We have taken 10:1 distribution i.e 10 lakh instances of training data and 1lakh instances of testing data approximately. 
+
+\section{Training models}
+We ran various classification algorithms starting from Decision Tree\cite{quinlan1987simplifying}, Random Forest\cite{liaw2002classification} and later proceeding to SVM\cite{suykens1999least}. We also tried neural networks\cite{maind2014research} with different settings of layers and have observed the patterns of the results which we obtained.
+
+We further proceeded to Multiple VM-type systems using the proposed models and have recorded the results of it.
